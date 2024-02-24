@@ -1,0 +1,25 @@
+{
+  "name": "reactjs",
+  "version": "1.0.0",
+  "description": "Learning ReactJS",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SankalpYerigeri/ReactJS.git"
+  },
+  "keywords": [
+    "react",
+    "learning",
+    "Sankalp",
+    "frontend"
+  ],
+  "author": "Sankalp Yerigeri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SankalpYerigeri/ReactJS/issues"
+  },
+  "homepage": "https://github.com/SankalpYerigeri/ReactJS#readme"
+}
