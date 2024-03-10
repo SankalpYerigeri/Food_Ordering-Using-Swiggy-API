@@ -1,19 +1,50 @@
 import React from "react";
 import  ReactDOM  from "react-dom/client";
 
-const Description = () =>
+const Header = () =>
 {
     return <>
-    <h4>Art and Photgraphy club of UVCE</h4>
+    <div className="header">
+    <div className="logo-container">
+        <img className="logo" src="https://media.istockphoto.com/id/1184633031/vector/cartoon-burger-vector-isolated-illustration.jpg?s=612x612&w=0&k=20&c=Z66WFszea0EkDxLe2179qxjBi4zvsOVvQsZ3AbQRjB8="/>
+    </div>
+    <div className="nav-items">
+        <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Cart</li>
+        </ul>
+    </div>
+    </div>
     </>
 }
 
-const HeadingComponent = () =>
+const Body = () =>
 {
-    return <><h1>UVCE Prathibimba</h1>
-    <Description/>
+    return (
+        <>
+        <div className="body">
+            <div className="search">Search</div>
+            <div className="res-container">
+                //Res container
+            </div>
+
+        </div>
+        </>
+    )
+}
+
+const AppLayout = () =>
+{
+    return <>
+    <Header/>
+    //Header
+    //Body
+    //Footer
+    
     </>
     
 }
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<HeadingComponent/>);
+root.render(<AppLayout/>);

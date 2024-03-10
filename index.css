@@ -1,0 +1,22 @@
+.logo
+{
+    height: 150px;
+    width: 150px;
+}
+.header
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-items > ul
+{
+    display: flex;
+}
+
+.nav-items > ul > li
+{
+    padding: 10px;
+    margin: 10px;
+    list-style-type: none;
+}
