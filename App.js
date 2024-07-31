@@ -21,125 +21,398 @@ const Header = () =>
     );
 }
 
-const resObj =
- {
-            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-            "info": {
-              "id": "877052",
-              "name": "PUNJAB- E- DHABA",
-              "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/4/27/50cf8b3d-ee9b-4cd8-a54c-0b6d960f6a1b_877052.jpg",
-              "locality": "5th Cross",
-              "areaName": "Indiranagar",
-              "costForTwo": "₹350 for two",
-              "cuisines": [
-                "Punjabi",
-                "Chaat",
-                "Beverages"
-              ],
-              "avgRating": 3.8,
-              "parentId": "1476",
-              "avgRatingString": "3.8",
-              "totalRatingsString": "10+",
-              "promoted": true,
-              "adTrackingId": "cid=15073355~p=0~adgrpid=15073355#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=877052~eid=1f66501c-a335-465d-84c9-5d2e529754ca~srvts=1720633206526~collid=83639",
-              "sla": {
-                "deliveryTime": 43,
-                "lastMileTravel": 7.1,
-                "serviceability": "SERVICEABLE",
-                "slaString": "40-45 mins",
-                "lastMileTravelString": "7.1 km",
-                "iconType": "ICON_TYPE_EMPTY"
-              },
-              "availability": {
-                "nextCloseTime": "2024-07-10 23:30:00",
-                "opened": true
-              },
-              "badges": {
-                
-              },
-              "isOpen": true,
-              "type": "F",
-              "badgesV2": {
-                "entityBadges": {
-                  "textBased": {
-                    
-                  },
-                  "imageBased": {
-                    
-                  },
-                  "textExtendedBadges": {
-                    
-                  }
-                }
-              },
-              "aggregatedDiscountInfoV3": {
-                "header": "20% OFF",
-                "subHeader": "ABOVE ₹350",
-                "discountTag": "FLAT DEAL"
-              },
-              "orderabilityCommunication": {
-                "title": {
-                  
-                },
-                "subTitle": {
-                  
-                },
-                "message": {
-                  
-                },
-                "customIcon": {
-                  
-                }
-              },
-              "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                  "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                  "lottie": {
-                    
-                  },
-                  "video": {
-                    
-                  }
-                }
-              },
-              "reviewsSummary": {
-                
-              },
-              "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-              "isNewlyOnboarded": true,
-              "restaurantOfferPresentationInfo": {
-                
-              },
-              "externalRatings": {
-                "aggregatedRating": {
-                  "rating": "--"
-                }
-              },
-              "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-            },
-            "analytics": {
-              
-            },
-            "cta": {
-              "link": "swiggy://menu?restaurant_id=877052&source=collection&query=Biryani",
-              "text": "RESTAURANT_MENU",
-              "type": "DEEPLINK"
-            },
-            "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food"
-          
+const resList = 
+[
+  {
+    "info": {
+      "id": "788303",
+      "name": "Wow! Momo",
+      "cloudinaryImageId": "64fd45fd9f44c1737bc446e470bed666",
+      "locality": "Near Shanti Nagar Bus Stop",
+      "areaName": "Shantinagar",
+      "costForTwo": "₹300 for two",
+      "cuisines": [
+        "Tibetan",
+        "Healthy Food",
+        "Asian",
+        "Chinese",
+        "Snacks",
+        "Continental",
+        "Desserts",
+        "Beverages"
+      ],
+      "avgRating": 4.3,
+      "parentId": "1776",
+      "avgRatingString": "4.3",
+      "totalRatingsString": "100+",
+      "sla": {
+        "deliveryTime": 24,
+        "lastMileTravel": 2.4,
+        "serviceability": "SERVICEABLE",
+        "slaString": "20-25 mins",
+        "lastMileTravelString": "2.4 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2024-07-25 23:00:00",
+        "opened": true
+      },
+      "badges": {
+        
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {
+            
+          },
+          "textBased": {
+            
+          },
+          "textExtendedBadges": {
+            
+          }
         }
-
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "ITEMS",
+        "subHeader": "AT ₹99"
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {
+            
+          },
+          "video": {
+            
+          }
+        }
+      },
+      "reviewsSummary": {
+        
+      },
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {
+        
+      },
+      "externalRatings": {
+        "aggregatedRating": {
+          "rating": "--"
+        }
+      },
+      "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+    },
+    "analytics": {
+      
+    },
+    "cta": {
+      "link": "https://www.swiggy.com/restaurants/wow-momo-near-shanti-nagar-bus-stop-shantinagar-bangalore-788303",
+      "type": "WEBLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "822315",
+      "name": "Subway",
+      "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/4/9/e0ab56c3-3d8e-4214-8705-240795d737c0_822315.jpg",
+      "locality": "Langford Road",
+      "areaName": "Richmond Town",
+      "costForTwo": "₹350 for two",
+      "cuisines": [
+        "Salads",
+        "Snacks",
+        "Desserts",
+        "Beverages"
+      ],
+      "avgRating": 4.4,
+      "parentId": "2",
+      "avgRatingString": "4.4",
+      "totalRatingsString": "100+",
+      "sla": {
+        "deliveryTime": 21,
+        "lastMileTravel": 2.3,
+        "serviceability": "SERVICEABLE",
+        "slaString": "20-25 mins",
+        "lastMileTravelString": "2.3 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2024-07-26 01:00:00",
+        "opened": true
+      },
+      "badges": {
+        "imageBadges": [
+          {
+            "imageId": "Rxawards/_CATEGORY-Sandwiches.png",
+            "description": "Delivery!"
+          }
+        ]
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {
+            "badgeObject": [
+              {
+                "attributes": {
+                  "description": "Delivery!",
+                  "imageId": "Rxawards/_CATEGORY-Sandwiches.png"
+                }
+              }
+            ]
+          },
+          "textBased": {
+            
+          },
+          "textExtendedBadges": {
+            
+          }
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "50% OFF",
+        "subHeader": "UPTO ₹100"
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {
+            
+          },
+          "video": {
+            
+          }
+        }
+      },
+      "reviewsSummary": {
+        
+      },
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "isNewlyOnboarded": true,
+      "restaurantOfferPresentationInfo": {
+        
+      },
+      "externalRatings": {
+        "aggregatedRating": {
+          "rating": "--"
+        }
+      },
+      "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+    },
+    "analytics": {
+      
+    },
+    "cta": {
+      "link": "https://www.swiggy.com/restaurants/subway-langford-road-richmond-town-bangalore-822315",
+      "type": "WEBLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "432976",
+      "name": "KFC",
+      "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/4/17/9869efb0-ef0e-41eb-bffa-9d6e03eef55e_432976.JPG",
+      "locality": "Double Road",
+      "areaName": "Shanti Nagar",
+      "costForTwo": "₹400 for two",
+      "cuisines": [
+        "Burgers",
+        "Fast Food",
+        "Rolls & Wraps"
+      ],
+      "avgRating": 4.3,
+      "parentId": "547",
+      "avgRatingString": "4.3",
+      "totalRatingsString": "1K+",
+      "sla": {
+        "deliveryTime": 24,
+        "lastMileTravel": 1.9,
+        "serviceability": "SERVICEABLE",
+        "slaString": "20-25 mins",
+        "lastMileTravelString": "1.9 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2024-07-25 23:00:00",
+        "opened": true
+      },
+      "badges": {
+        
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {
+            
+          },
+          "textBased": {
+            
+          },
+          "textExtendedBadges": {
+            
+          }
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "ITEMS",
+        "subHeader": "AT ₹179"
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {
+            
+          },
+          "video": {
+            
+          }
+        }
+      },
+      "reviewsSummary": {
+        
+      },
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {
+        
+      },
+      "externalRatings": {
+        "aggregatedRating": {
+          "rating": "--"
+        }
+      },
+      "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+    },
+    "analytics": {
+      
+    },
+    "cta": {
+      "link": "https://www.swiggy.com/restaurants/kfc-double-road-shanti-nagar-bangalore-432976",
+      "type": "WEBLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "622202",
+      "name": "MOJO Pizza - 2X Toppings",
+      "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/6/24/295f1bfc-237b-4bd4-832b-a23fdf08f8aa_622202.JPG",
+      "locality": "Langford Road",
+      "areaName": "Shantinagar",
+      "costForTwo": "₹250 for two",
+      "cuisines": [
+        "Pizzas",
+        "Italian",
+        "Fast Food",
+        "Desserts"
+      ],
+      "avgRating": 4.6,
+      "parentId": "11329",
+      "avgRatingString": "4.6",
+      "totalRatingsString": "100+",
+      "sla": {
+        "deliveryTime": 30,
+        "lastMileTravel": 1.6,
+        "serviceability": "SERVICEABLE",
+        "slaString": "20-30 mins",
+        "lastMileTravelString": "1.6 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2024-07-26 02:00:00",
+        "opened": true
+      },
+      "badges": {
+        "textExtendedBadges": [
+          {
+            "iconId": "guiltfree/GF_Logo_android_3x",
+            "shortDescription": "options available",
+            "fontColor": "#7E808C"
+          }
+        ]
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {
+            
+          },
+          "textBased": {
+            
+          },
+          "textExtendedBadges": {
+            "badgeObject": [
+              {
+                "attributes": {
+                  "description": "",
+                  "fontColor": "#7E808C",
+                  "iconId": "guiltfree/GF_Logo_android_3x",
+                  "shortDescription": "options available"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "ITEMS",
+        "subHeader": "AT ₹179"
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {
+            
+          },
+          "video": {
+            
+          }
+        }
+      },
+      "reviewsSummary": {
+        
+      },
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {
+        
+      },
+      "externalRatings": {
+        "aggregatedRating": {
+          "rating": "--"
+        }
+      },
+      "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+    },
+    "analytics": {
+      
+    },
+    "cta": {
+      "link": "https://www.swiggy.com/restaurants/mojo-pizza-2x-toppings-langford-road-shantinagar-bangalore-622202",
+      "type": "WEBLINK"
+    }
+  }
+]
+ 
 const RestuarantCard = (props) =>
 {
     const {resData} = props;
+
+
+    const {name, cuisines, avgRating} = resData?.info;
     console.log(props);
     return (
         <div className="res-card">
             <img className="res-logo" alt="res-logo" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+resData.info.cloudinaryImageId} />
-            <h3>{resData.info.name}</h3>
-            <h4>{resData.info.cuisines.join(", ")}</h4>
-            <h4>{resData.info.avgRating}</h4>
+            <h3>{name}</h3>
+            <h4>{cuisines.join(", ")}</h4>
+            <h4>{avgRating}</h4>
             <h4>{resData.info.sla.deliveryTime}</h4>
         </div>
     )
@@ -152,8 +425,11 @@ const Body = () =>
         <div className="body">
             <div className="search">Search</div>
             <div className="res-container">
-                <RestuarantCard resData = {resObj} />
-                <RestuarantCard resData = {resObj}/>
+                <RestuarantCard resData = {resList[0]} />
+                <RestuarantCard resData = {resList[1]}/>
+                <RestuarantCard resData = {resList[2]}/>
+                <RestuarantCard resData = {resList[3]}/>
+                
                               
             </div>
 
