@@ -1,3 +1,9 @@
+.filter-btn
+{
+    margin: 10px;
+    cursor: pointer;
+}
+
 .logo
 {
     height: 150px;

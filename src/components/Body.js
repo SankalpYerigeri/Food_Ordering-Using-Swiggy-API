@@ -3,9 +3,18 @@ import { resList } from "../utils/mockdata";
 
 const Body = () =>
     {
+        let listofRes = resList;
         return (
             <div className="body">
-                <div className="search">Search</div>
+                <div className="filter">
+                    <button className="filter-btn"
+                     onClick={()=> 
+                     {
+                        listofRes = listofRes.filter((res)=>res.info.avgRating>4.3);
+                        console.log(listofRes);
+                     }
+                     }>Top Rated Restuarants</button>
+                </div>
                 <div className="res-container">
                     {resList.map
                     ((restuarant) => 
