@@ -1,9 +1,10 @@
 import RestuarantCard from "./RestaurantCard";
 import { resList } from "../utils/mockdata";
+import { useState } from "react";
 
 const Body = () =>
     {
-        let listofRes = resList;
+        let [listofRes]= useState(resList);
         return (
             <div className="body">
                 <div className="filter">
@@ -16,7 +17,7 @@ const Body = () =>
                      }>Top Rated Restuarants</button>
                 </div>
                 <div className="res-container">
-                    {resList.map
+                    {listofRes.map
                     ((restuarant) => 
                     (<RestuarantCard key={restuarant.info.id} resData={restuarant} />))}                             
                 </div>
