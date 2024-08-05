@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 const Body = () =>
     {
-        let [listofRes, setlistofRes]= useState(resList);
+        const [listofRes, setlistofRes]= useState(resList);
 
         useEffect(()=>
         {
@@ -17,7 +17,8 @@ const Body = () =>
 
             const json = await data.json();
 
-            console.log(json);
+            console.log(json.data.cards[3].card.card.info);
+            setlistofRes(json.data.cards);
         }
         
         return (
