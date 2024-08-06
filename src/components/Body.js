@@ -20,12 +20,9 @@ const Body = () =>
             setlistofRes(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
         }
 
-        if(listofRes.length === 0)
-        {
-            return <Shimmer/>
-        }
-        
-        return (
+        //Conditional Rendering 
+                
+        return listofRes.length === 0 ? <Shimmer/> : (
             <div className="body">
                 <div className="filter">
                     <button className="filter-btn"
