@@ -5,6 +5,8 @@ import Shimmer from "./Shimmer";
 const Body = () =>
     {
         const [listofRes, setlistofRes]= useState([]);
+        const [searchText, setSearchText] = useState("");
+        const [filterdRes, setFilteredRes] = useState([]);
 
         useEffect(()=>
         {
@@ -18,6 +20,7 @@ const Body = () =>
             const json = await data.json();
 
             setlistofRes(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
+            setFilteredRes(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
         }
 
         //Conditional Rendering 
@@ -25,16 +28,31 @@ const Body = () =>
         return listofRes.length === 0 ? <Shimmer/> : (
             <div className="body">
                 <div className="filter">
+                    <div className="search">
+                        <input type="text" className="search-box" value={searchText}
+                        onChange={(e)=>
+                        {
+                            setSearchText(e.target.value);
+                        }
+                        }></input>
+                        <button onClick={()=>
+                            {
+                                console.log(searchText);
+                                const filteredList = listofRes.filter((res)=>res.info.name.includes(searchText));
+                                setFilteredRes(filteredList);
+                            }
+                        }>Search</button>
+                    </div>
                     <button className="filter-btn"
                      onClick={()=> 
                      {
                         const fileterdList = listofRes.filter((res)=>res.info.avgRating>4.3);
-                        setlistofRes(fileterdList);
+                        setFilteredRes(fileterdList);
                      }
                      }>Top Rated Restuarants</button>
                 </div>
                 <div className="res-container">
-                    {listofRes.map
+                    {filterdRes.map
                     ((restuarant) => 
                     (<RestuarantCard key={restuarant.info.id} resData={restuarant} />))}                             
                 </div>
