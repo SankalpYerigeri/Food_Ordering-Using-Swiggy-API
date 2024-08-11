@@ -15,12 +15,19 @@ const RestaurantMenu = () =>
 
         const json = await data.json();
 
-        console.log(json);
+        console.log(json.data);
+        setresInfo(json.data);
     }
+
+    const {name, cuisines, costForTwo} = resInfo.cards[2]?.card?.card.info;
+
+
     return (resInfo===null) ? (<Shimmer/>) : (
         <>
         <div>
-            <h1>Name of the Restaurant</h1>
+            <h1>{name}</h1>
+            <h3>{cuisines.join(", ")}</h3>
+            <h3>{costForTwo}</h3>
             <h2>Menu</h2>
             <ul>
                 <li>Biryani</li>
