@@ -1,7 +1,9 @@
-import { useEffect } from "react";
-
+import { useEffect, useState } from "react";
+import Shimmer from "./Shimmer";
 const RestaurantMenu = () =>
 {
+
+    const [resInfo, setresInfo] = useState(null);
     useEffect(()=>
     {
         fetchMenu();
@@ -15,7 +17,7 @@ const RestaurantMenu = () =>
 
         console.log(json);
     }
-    return(
+    return (resInfo===null) ? (<Shimmer/>) : (
         <>
         <div>
             <h1>Name of the Restaurant</h1>
