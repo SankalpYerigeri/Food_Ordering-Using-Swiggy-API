@@ -15,14 +15,19 @@ const RestaurantMenu = () =>
 
         const json = await data.json();
 
-        console.log(json.data);
+        console.log(json);
         setresInfo(json.data);
+        console.log(resInfo);
     }
+
+    if ( resInfo === null) return (<Shimmer/>)
 
     const {name, cuisines, costForTwo} = resInfo.cards[2]?.card?.card.info;
 
+    //const {itemCards} = resInfo?.cards[2].groupedCard.cardsGroupMap.REGULAR.cards[1].card.card
 
-    return (resInfo===null) ? (<Shimmer/>) : (
+
+    return (
         <>
         <div>
             <h1>{name}</h1>
