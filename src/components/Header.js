@@ -8,7 +8,7 @@ const Header = () =>
     {
         const [btnName, setBtnName] = useState("Login");
         return( <>
-        <div className="header">
+        <div className="flex">
         <div className="logo-container">
             <img className="logo" src={LOGO_URL}/>
         </div>
