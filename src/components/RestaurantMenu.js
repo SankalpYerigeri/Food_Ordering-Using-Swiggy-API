@@ -36,8 +36,12 @@ const RestaurantMenu = () =>
     const {name, cuisines, costForTwo} = resInfo.cards[2]?.card?.card.info;
 
     const {itemCards} = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card?.card.categories[1];
-    console.log(resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card?.card.categories[1].title);
+    console.log(resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
     console.log(itemCards);
+
+    const categories = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(c=>c.card?.card?.["@type"] === 'type.googleapis.com/swiggy.presentation.food.v2.ItemCategory');
+    console.log("The categories", categories);
+    
 
 
     return (
