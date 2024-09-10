@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { base_menu_url, end_url } from "../utils/constants";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import RestaurantCategory from "./RestaurantCategory";
 
 
 const RestaurantMenu = () =>
@@ -46,18 +47,16 @@ const RestaurantMenu = () =>
 
     return (
         <>
-        <div>
-            <h1>{name}</h1>
-            <h3>{cuisines.join(", ")}</h3>
-            <h3>{costForTwo}</h3>
-            <h2>Menu</h2>
-            <ul>
-                {itemCards.map(item => <li key={item.card.info.id}>{item.card.info.name}</li>)}
-                
-            </ul>
+        <div className="text-center">
+            <h1 className="font-bold my-6 text-2xl">{name}</h1>
+            <h3 className="font-bold text-lg">{cuisines.join(", ")}</h3>
+
+           { /* Categories accordian */}
+           {categories.map((category)=>(<RestaurantCategory/>))}
+            
         </div>
         </>
-    )
-}
+    );
+};
 
 export default RestaurantMenu;
