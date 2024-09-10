@@ -52,7 +52,7 @@ const RestaurantMenu = () =>
             <h3 className="font-bold text-lg">{cuisines.join(", ")}</h3>
 
            { /* Categories accordian */}
-           {categories.map((category)=>(<RestaurantCategory/>))}
+           {categories.map((category)=>(<RestaurantCategory catdata={category?.card.card}/>))}
             
         </div>
         </>
