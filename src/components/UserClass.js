@@ -1,4 +1,5 @@
-import React from "react"
+import React from "react";
+
 
 class UserClass extends React.Component
 {
@@ -48,6 +49,7 @@ class UserClass extends React.Component
             <>
             <h1>{name}</h1>
             <h2>{login}</h2>
+            
             <img className="w-20 h-20" src={avatar_url} alt="myphoto"/>
             <h3>Contact : @sankalp_yerigeri</h3>
             
