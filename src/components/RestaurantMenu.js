@@ -12,6 +12,8 @@ const RestaurantMenu = () =>
     const resId = useParams();
     console.log(resId);
 
+    const [showIndex, setShowIndex] = useState(null);
+
     
     
     const [resInfo, setresInfo] = useState(null);
@@ -52,7 +54,13 @@ const RestaurantMenu = () =>
             <h3 className="font-bold text-lg">{cuisines.join(", ")}</h3>
 
            { /* Categories accordian */}
-           {categories.map((category)=>(<RestaurantCategory catdata={category?.card.card}/>))}
+           {categories.map((category, index)=>//Controlled Component
+            (
+            <RestaurantCategory
+            showItems={index === showIndex ? true : false}
+            catdata={category?.card.card}
+            setShowIndex={()=>setShowIndex(index)}/>
+            ))}
             
         </div>
         </>
