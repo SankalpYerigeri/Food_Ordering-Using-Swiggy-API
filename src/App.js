@@ -13,6 +13,7 @@ const Grocery = lazy(()=>import("./components/Grocery."))
 
 const AppLayout = () =>
 {
+    alert("Please make sure the CORS plugin is enabled in your Browser for proper working of the application");
 
     const [userName, setUserName] = useState();
 
