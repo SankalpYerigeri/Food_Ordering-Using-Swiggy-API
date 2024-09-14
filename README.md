@@ -1,1 +1,3 @@
-A dynamic food ordering app by using Swiggy live API
+A Dynamic web Application using Swiggy API
+
+-> 👌Built from Scratch using Parcel bundler pack
