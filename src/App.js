@@ -7,13 +7,14 @@ import About from "./components/About";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import UserContext from "./utils/UserContext";
-
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
 
 const Grocery = lazy(()=>import("./components/Grocery."))
 
 const AppLayout = () =>
 {
-    alert("Please make sure the CORS plugin is enabled in your Browser for proper working of the application");
+    //alert("Please make sure the CORS plugin is enabled in your Browser for proper working of the application");
 
     const [userName, setUserName] = useState();
 
@@ -27,12 +28,14 @@ const AppLayout = () =>
         setUserName(data.name);
     }, []);
     return(
+        <Provider store={appStore}>
         <UserContext.Provider value={{loggedInUser: userName, setUserName}}>
         <div className="app">
             <Header/>
             <Outlet/>
         </div>
         </UserContext.Provider>
+        </Provider>
 
     );
     
