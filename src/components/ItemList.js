@@ -5,10 +5,10 @@ import { useDispatch } from "react-redux";
 const ItemList = ({data}) =>
 {
     const dispatch = useDispatch();
-    const handleAddItem = () =>
+    const handleAddItem = (item) =>
     {
-        dispatch(addItem("pizza"));
-    }
+        dispatch(addItem(item));
+    };
 
     console.log(data);
     return (
@@ -25,7 +25,7 @@ const ItemList = ({data}) =>
                         </div>
                         <div className="w-3/12 p-4 ">
                             <img src={CDN_URL + item.card.info.imageId} className="w-full"/>
-                            <button className="p-2 rounded-lg bg-green-200" onClick={handleAddItem}>Add</button>
+                            <button className="p-2 rounded-lg bg-green-200" onClick={()=>handleAddItem(item)}>Add</button>
                         </div>
                 </div>
                 
